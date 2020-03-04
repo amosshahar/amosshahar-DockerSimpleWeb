@@ -1,0 +1,24 @@
+language: node_js
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t amosshahar-DockerSimpleWeb -f Dockerfile.dev .
+
+script:
+  - docker run amosshahar-DockerSimpleWeb npm run test -- --coverage
+
+deploy:
+  edge: true  
+  provider: elasticbeanstalk
+  region: "us-west-1"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-us-west-1-717898102007
+  bucket_path: "docker"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
