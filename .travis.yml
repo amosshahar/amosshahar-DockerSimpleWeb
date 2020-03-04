@@ -6,7 +6,7 @@ before_install:
   - docker build -t amosshahar-dockersimpleweb -f Dockerfile.dev .
 
 script:
-  - docker run amosshahar-dockersimpleWeb npm run test -- --coverage
+  - docker run amosshahar-dockersimpleweb npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
