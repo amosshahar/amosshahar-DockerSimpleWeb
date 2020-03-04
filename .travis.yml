@@ -9,6 +9,7 @@ script:
   - docker run -e CI=true amosshahar-dockersimpleweb npm run test -- --coverage
 
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: "us-west-1"
   app: "docker"
