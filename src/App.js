@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          amos simple test
+          amos simple test ver3
         </p>
         <a
           className="App-link"
