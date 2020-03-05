@@ -11,10 +11,10 @@ script:
 deploy:
   edge: true
   provider: elasticbeanstalk
-  region: "us-west-1"
+  region: "us-east-1"
   app: "amos-simple-web"
   env: "AmosSimpleWeb-env"
-  bucket_name: "elasticbeanstalk-us-west-1-717898102007"
+  bucket_name: "elasticbeanstalk-us-east-1-717898102007"
   bucket_path: "docker"
   on:
     branch: master
